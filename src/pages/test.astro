@@ -1,0 +1,27 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+const MMA = ["M", "M", "A"];
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+            <ul>
+                {MMA.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+              My Name Is Koshihkari !
+		</main>
+		<Footer />
+	</body>
+</html>
